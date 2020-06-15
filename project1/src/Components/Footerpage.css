@@ -1,0 +1,17 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:black;
+    color:#9FFFCB;
+    text-align: center;
+    
+  }
+
+  .btn{
+    color: #9FFFCB;
+    height: 1px;
+    width: 1px;
+    align-content: left;
+  }
