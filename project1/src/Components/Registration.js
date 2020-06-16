@@ -14,11 +14,20 @@ class Registration extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(event) {
-    this.setState({
-      [event.target.name]: event.target.value,
-    });
+  
+
+  handleChange(field, e){         
+    let fields = this.state.fields;
+    fields[field] = e.target.value;        
+    this.setState({fields});
   }
+  
+
+  // handleChange(event) {
+  //   this.setState({
+  //     [event.target.name]: event.target.value,
+  //   });
+  // }
   Regclick = () => {
     this.setState({ regsuc: true });
 };
@@ -30,7 +39,7 @@ class Registration extends Component {
     return (
       <div class= "container row">
        
-       <form action="/login" method="post">
+       <form action="#" method="post">
        <div class="row">
             <h3>Registration Page</h3>
         </div>
@@ -49,7 +58,7 @@ class Registration extends Component {
         <label for="Repassword">Confirm Password</label>
         <input type="password" placeholder="Reenter Password" name="Repassword" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required/>
             
-        <button type="submit" onClick={this.Regclick} style={{backgroundColor:"#000000"}}>Register</button>
+        <button type="submit" style={{backgroundColor:"#000000"}}>Register</button>
         <div class="container" style={{backgroundColor:"#F2F3F4" }}>
         
         <span class="fgpsw"> <a href="#">Forgot Password?</a></span>

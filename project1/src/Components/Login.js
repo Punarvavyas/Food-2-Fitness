@@ -30,15 +30,15 @@ class Login extends Component {
     return (
       <div class= "container">
        
-       <form action="/login" method="post">
+       <form action="/#" method="post">
        <h3>Login Page</h3>
         <label for="username">Enter Username:</label>
-        <input type="text" placeholder="punarvavyas@gmail.com" name="username" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required/>
+        <input type="text" placeholder="punarvavyas@gmail.com" name="username"  required/>
 
         <label for="pass_word">Password</label>
-        <input type="password" placeholder="Enter Password" name="password" required/>
+        <input type="password" placeholder="Enter Password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required/>
             
-        <button type="submit" onClick={this.loginClick}  style={{backgroundColor:"#000000"}}>Login</button>
+        <button type="submit" style={{backgroundColor:"#000000"}}>Login</button>
         <div class="container" style={{backgroundColor:"#F2F3F4" }}>
         
         <span class="fgpsw"> <a href="#" >Forgot Password?</a></span>
